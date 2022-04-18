@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(107, 131, 131);">
+  <a class="navbar-brand" href="#"><strong>SAMSUNG</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Cards <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/table">Table <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/list">Lists <span class="sr-only">(current)</span></a>
+      </li> 
+     
+     
+    </ul>
+    <a href="/login" class="">
+   <button type="button" class="btn btn-danger ml-auto">LOGOUT</button>
+   </a>
+  </div>
+</nav>
+{{!-- crad section start --}}
+<section>
+        <div class="container-fluid content-row ">
+        <div class="row">
+
+            {{#each products}}
+            
+                <div class="col-12 col-md-4 mt-5  col-sm-6 col-xl-3 col-lg-4">
+                    <div class="card h-100  " >
+                        <img class="card-img-top p-3"
+                            src="{{this.Image}}"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.name}}</h5>
+                            <p class="card-text">{{this.Price}}</p>
+                            <a href="#" class="btn btn-primary">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                {{/each}}
+
+
+            </div> 
+        </div>
+    </section>

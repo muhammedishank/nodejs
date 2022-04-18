@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: rgb(86, 87, 87);">
+  <a class="navbar-brand" href="#"><strong>SAMSUNG</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Cards <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/table">Table <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/list">Lists <span class="sr-only">(current)</span></a>
+      </li> 
+     
+     
+    </ul>
+    <a href="/home" class="">
+   <button type="button" class="btn btn-primary ml-auto">Home</button>
+   </a>
+  </div>
+</nav>
+
+<section>
+    <div class="container mt-5">
+<div class="list-group">
+    {{#each products}}
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">{{name}}</h5>
+      <small>3 days ago</small>
+    </div>
+    <p class="mb-1">{{this.category}}</p>
+    <img style="width:50px;height:50px" src="{{Image}}">
+    <p class="mb-1">{{this.Price}}</p>
+  </a>
+  {{/each}}
+</div>
+</div>
+</section>
